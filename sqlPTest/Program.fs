@@ -18,4 +18,5 @@ type sql = SqlDataProvider<
 let main _ = 
     let ctx = sql.GetDataContext()
     //let m = ctx.Main Error!
+    printfn "%s" (ctx.Main.Customers |> Seq.head |> _.City)
     0
